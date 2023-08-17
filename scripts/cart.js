@@ -63,3 +63,10 @@ $(document).ready(function() {
 			$("#cart-total").html('&#8358;' + total)
 		}
 	}
+
+	$(document).on('click', '.cart-remove', function(event) {
+		event.preventDefault();
+		let id = $(this).attr('id');
+
+		removeCart(id);
+	});

@@ -128,3 +128,19 @@
 			echo json_encode(500);
 		}
 	}
+
+	if(isset($_GET['removeCart']) AND $_GET['removeCart'] != "")
+	{
+		$id = $_GET['removeCart'];
+
+		$remove = $db->deleteWhere("cart", "cart_id", $id);
+
+		if($remove)
+		{
+			echo json_encode(200);
+		}
+		else
+		{
+			echo json_encode(500);
+		}
+	}

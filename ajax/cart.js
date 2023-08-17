@@ -9,6 +9,7 @@ function addCart(data){
 		if(res == 200){
 			toastr.success("Item added to cart")
 		}
+		getCart();
 	})
 	.fail(function() {
 		console.log("error");
@@ -27,6 +28,28 @@ function getCart(){
 		console.log(res);
 		if(res.status == 200){
 			showCart(res.data);
+		}
+		else{
+
+		}
+	})
+	.fail(function() {
+		console.log("error");
+	});
+	
+}
+
+function removeCart(id){
+	$.ajax({
+		url: 'backend/api/cart?removeCart='+id,
+		type: 'GET',
+		dataType: 'json',
+		
+	})
+	.done(function(res){
+		if(res == 200){
+			toastr.success("Item removed from cart");
+			getCart();
 		}
 	})
 	.fail(function() {
