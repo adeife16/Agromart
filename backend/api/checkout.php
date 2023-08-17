@@ -11,11 +11,13 @@
 	{
 		$error = true;
 		$ref = $_POST['checkout'];
+		$total = 0
 
 		$get_cart = $db->fetchWhere("cart", "customer_id", $user_id, "cart_id");
 
 		foreach ($get_cart as $val)
 		{
+			$total = $total + intval($val['total']);
 			$field = ["order_id", "status"];
 			$values = [$ref, "Processed"];
 			$update = $db->updateWhere("cart", $field, $values, "cart_id", $val['cart_id']);
@@ -29,6 +31,7 @@
 		{
 			$data = [
 				"order_id" => $ref,
+				"total" => $total,
 				"date" => date('Y-m-d'),
 				"customer_id" => $user_id
 			];

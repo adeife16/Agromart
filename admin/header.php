@@ -66,7 +66,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo $web_link. "customers"; ?>">
+        <a class="nav-link" href="<?php echo $web_link. "order"; ?>">
           <i class="fas fa-fw fa-dollar-sign"></i>
           <span>Orders</span></a>
       </li>

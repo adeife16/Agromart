@@ -110,6 +110,11 @@
   	<script type="text/javascript" src="ajax/create_mod.js"></script>
   	<script type="text/javascript" src="scripts/create_mod.js"></script>
   <?php endif ?>
+
+  <?php if ($title == "Orders"): ?>
+    <script type="text/javascript" src="ajax/orders.js"></script>
+    <script type="text/javascript" src="scripts/orders.js"></script>
+  <?php endif ?>
 </body>
 
 </html>
