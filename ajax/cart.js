@@ -25,11 +25,13 @@ function getCart(){
 		
 	})
 	.done(function(res){
-		console.log(res);
 		if(res.status == 200){
 			showCart(res.data);
 		}
 		else{
+		$("#cart-count").html("");
+		$("#cart-list").html("")
+		$("#cart-total").html('&#8358;0' )
 
 		}
 	})

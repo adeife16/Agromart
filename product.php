@@ -1,13 +1,108 @@
 <?php 
-    $title = "Home";
+    $title = "Product";
     require_once 'header.php';
 ?>
     <main class="no-main">
-        <section class="section--flashSale">
+        <section class="section--product-type section-product--default">
             <div class="container">
-                <div class="flashSale__product pt-4 pb-4">
-                    <div class="row m-0" id="prodata">
-                        
+                <div class="product__detail">
+                    <div class="row">
+                        <div class="col-12 col-lg-9">
+                            <div class="ps-product--detail">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="ps-product__variants">
+                                            <div class="ps-product__gallery" id="pro-thumb">
+
+                                            </div>
+                                            <div class="ps-product__thumbnail">
+                                                <div class="ps-product__zoom">
+                                                    <img id="ps-product-zoom" src="" alt="alt">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="ps-product__price" id="pro-name"></div>
+                                        <div class="ps-product__rating" id="pro-rating"></div>
+                                        <div class="ps-product__sale">
+                                            <span class="price-sale"></span>
+                                        </div>
+                                        <div class="ps-product__avai alert__success">Availability: <span class="stock"></span>
+                                        </div>
+                                        <div class="ps-product__info">
+                                            <ul class="ps-list--rectangle">
+                                                <li> <span><i class="icon-square"></i></span>Category: <span class="pro-cat"></span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="ps-product__shopping">
+                                            <div class="ps-product__quantity">
+                                                <label>Quantity: </label>
+                                                <div class="def-number-input number-input safari_only">
+                                                    <button class="minus"><i class="icon-minus"></i></button>
+                                                    <input class="quantity" min="1" name="quantity" value="1" type="number">
+                                                    <button class="plus"><i class="icon-plus"></i></button>
+                                                </div>
+                                            </div><button type="button" class=" btn ps-product__addcart ps-button"><i class="icon-cart"></i>Add to cart</button>
+
+                                            <a class="ps-product__icon" href="#"><i class="icon-heart"></i></a>
+                                        </div>
+                                        <div class="ps-product__category" >
+                                            <p id="pro-desc"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <div class="ps-product--extention">
+                                <div class="extention__block">
+                                    <div class="extention__item">
+                                        <div class="extention__icon"><i class="icon-truck"></i></div>
+                                        <div class="extention__content"> <b class="text-black">Free Shipping </b>apply to all orders over <span class="text-success">$100</span></div>
+                                    </div>
+                                </div>
+                                <div class="extention__block">
+                                    <div class="extention__item">
+                                        <div class="extention__icon"><i class="icon-leaf"></i></div>
+                                        <div class="extention__content">Guranteed <b class="text-black">100% Organic </b>from natural farmas </div>
+                                    </div>
+                                </div>
+                                <div class="extention__block">
+                                    <div class="extention__item border-none">
+                                        <div class="extention__icon"><i class="icon-repeat-one2"></i></div>
+                                        <div class="extention__content"> <b class="text-black">1 Day Returns </b>if you change your mind</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="reviews">
+                        <h3>Reviews</h3>
+                        <div class="review-div row justify-content-center">
+                            
+                        </div>
+                    </div>
+                    <div class="new-review mt-4 ">
+                        <h3>Submit Review</h3>
+                        <div class="container mt-5">
+                            <div class="row  justify-content-center">
+                                <div class="col-md-8 shadow p-5">
+                                    <h2>Rating and Review</h2>
+                                    <div class="rating">
+                                        <i class="fa fa-star fa-lg star" data-value="1" style="cursor: pointer;"></i>
+                                        <i class="fa fa-star fa-lg star" data-value="2" style="cursor: pointer;"></i>
+                                        <i class="fa fa-star fa-lg star" data-value="3" style="cursor: pointer;"></i>
+                                        <i class="fa fa-star fa-lg star" data-value="4" style="cursor: pointer;"></i>
+                                        <i class="fa fa-star fa-lg star" data-value="5" style="cursor: pointer;"></i>
+                                    </div>
+                                    <textarea class="form-control mt-3" id="review" placeholder="Write your review"></textarea>
+                                    <button class="btn btn-success mt-3" type="button" id="submitBtn">Submit</button>
+                                </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>

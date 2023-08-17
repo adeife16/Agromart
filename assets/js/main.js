@@ -746,7 +746,7 @@
         countDown();
         shopallBrandTab();
         slidePriceWidget();
-        selectImageProductDetail();
+        // selectImageProductDetail();
         backgroundImage();
         owlCarouselConfig();
         subMenuToggle();

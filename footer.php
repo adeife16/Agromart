@@ -259,5 +259,10 @@
         <script type="text/javascript" src="ajax/home.js"></script>
         <script type="text/javascript" src="scripts/home.js"></script>
     <?php endif ?>
+
+    <?php if ($title == "Product"): ?>
+        <script type="text/javascript" src="ajax/product.js"></script>
+        <script type="text/javascript" src="scripts/product.js"></script>
+    <?php endif ?>
 </body>
 </html>
