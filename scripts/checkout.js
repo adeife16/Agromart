@@ -36,7 +36,7 @@ paymentForm.addEventListener("submit", payWithPaystack, false);
 function payWithPaystack() {
   
   let handler = PaystackPop.setup({
-    key: 'pk_test_3b4fda90986aba4b6db11a9141022994b5e95989', // Replace with your public key
+    key: 'pk_test_4c51497d1c4fa4b769ad5f0d90f478c353135005', // Replace with your public key
     email: document.getElementById("email").value,
     amount: parseInt($(".checkout__money").attr('id')) * 100,
     ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
