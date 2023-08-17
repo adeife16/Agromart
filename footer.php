@@ -264,5 +264,11 @@
         <script type="text/javascript" src="ajax/product.js"></script>
         <script type="text/javascript" src="scripts/product.js"></script>
     <?php endif ?>
+
+    <?php if ($title == "Checkout"): ?>
+        <script src="https://js.paystack.co/v1/inline.js"></script>
+        <script type="text/javascript" src="ajax/checkout.js"></script>
+        <script type="text/javascript" src="scripts/checkout.js"></script>
+    <?php endif ?>
 </body>
 </html>

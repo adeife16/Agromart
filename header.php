@@ -217,9 +217,9 @@
                         </div>
                     </div>
                     <div class="header-inner__right">
-                        <a class="button-icon icon-md" href="http://nouthemes.net/html/farmart/wishlist.html">
+<!--                         <a class="button-icon icon-md" href="http://nouthemes.net/html/farmart/wishlist.html">
                         	<i class="icon-heart"></i><span class="badge bg-warning" id="wishlist-count">2</span>
-                        </a>
+                        </a> -->
                         <div class="button-icon btn-cart-header">
                         	<i class="icon-cart icon-shop5"></i><span class="badge bg-warning" id="cart-count"></span>
                             <div class="mini-cart">
@@ -244,7 +244,7 @@
                                             <div class="col-6 title">TOTAL</div>
                                             <div class="col-6 text-right total" id="cart-total"></div>
                                             <div class="col-12 d-flex">
-                                            	<a class="view-cart" href="<?php echo $web_link. "cart" ?>">View cart</a>
+                                            	<!-- <a class="view-cart" href="<?php echo $web_link. "cart" ?>">View cart</a> -->
                                             	<a class="checkout" href="<?php echo $web_link. "checkout" ?>">Checkout</a>
                                             </div>
                                         </div>
