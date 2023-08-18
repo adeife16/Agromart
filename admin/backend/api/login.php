@@ -10,31 +10,61 @@
 	if($email != "" AND $pass != "")
 	{
 		$details = $db->fetchWhere("admins", "email", $email, "*");
-		if(!$details)
+		if($details)
 		{
-			echo json_encode(500);
-			exit;
-		}
-		foreach ($details as $val)
-		{
-			$user_id = $val['user_id'];
-			$name = $val['name'];
-			$email = $val['email'];
-			$pass_hash = $val['password'];
-		}
-		if($pass == password_verify($pass, $pass_hash))
-		{
-			session_destroy();
-			session_start();
-			$_SESSION['user_id'] = $user_id;
-			$_SESSION['name'] = explode(" ", $name)[0];
-			$_SESSION['email'] = $email;
+			foreach ($details as $val)
+			{
+				$user_id = $val['user_id'];
+				$name = $val['name'];
+				$email = $val['email'];
+				$pass_hash = $val['password'];
+			}
+			if($pass == password_verify($pass, $pass_hash))
+			{
+				session_destroy();
+				session_start();
+				$_SESSION['user_id'] = $user_id;
+				$_SESSION['name'] = explode(" ", $name)[0];
+				$_SESSION['email'] = $email;
+				$_SESSION['role'] = "Admin";
 
-			echo json_encode(200);
+				echo json_encode(200);
+			}
+			else
+			{
+				echo json_encode(500);
+				exit;
+			}
 		}
 		else
 		{
-			echo json_encode(500);
-			exit;
+			$details = $db->fetchWhere("moderators", "email", $email, "*");
+			if($details)
+			{
+				foreach ($details as $val)
+				{
+					$user_id = $val['user_id'];
+					$name = $val['name'];
+					$email = $val['email'];
+					$pass_hash = $val['password'];
+				}
+				if($pass == password_verify($pass, $pass_hash))
+				{
+					session_destroy();
+					session_start();
+					$_SESSION['user_id'] = $user_id;
+					$_SESSION['name'] = explode(" ", $name)[0];
+					$_SESSION['email'] = $email;
+					$_SESSION['role'] = "Moderators";
+
+					echo json_encode(200);
+				}
+				else
+				{
+					echo json_encode(500);
+					exit;
+				}
+			}
 		}
+		exit;
 	}
