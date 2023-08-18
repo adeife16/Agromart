@@ -114,6 +114,11 @@
 		        'field' => 'c.customer_id',
 		        'operator' => '=',
 		        'value' => $user_id
+		    ),
+		    array(
+		        'field' => 'c.status',
+		        'operator' => '=',
+		        'value' => 'Pending'
 		    )
 		);
 
