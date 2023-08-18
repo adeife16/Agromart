@@ -11,9 +11,9 @@
 	{
 		$error = true;
 		$ref = $_POST['checkout'];
-		$total = 0
+		$total = 0;
 
-		$get_cart = $db->fetchWhere("cart", "customer_id", $user_id, "cart_id");
+		$get_cart = $db->fetchWhere("cart", "customer_id", $user_id, "cart_id,  total");
 
 		foreach ($get_cart as $val)
 		{
