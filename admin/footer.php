@@ -5,7 +5,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; Your Website <?php echo date('Y'); ?></span>
           </div>
         </div>
       </footer>
@@ -60,8 +60,8 @@
 	  <script src="vendor/chart.js/Chart.min.js"></script>
 
 	  <!-- Page level custom scripts -->
-	  <script src="js/demo/chart-area-demo.js"></script>
-	  <script src="js/demo/chart-pie-demo.js"></script>
+    <script type="text/javascript" src="ajax/dashboard.js"></script>
+    <script type="text/javascript" src="scripts/dashboard.js"></script>
   <?php endif ?>
 
 

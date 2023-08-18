@@ -1,5 +1,9 @@
 <?php 
 	session_start();
+  if(!isset($_SESSION['role']))
+  {
+    header('Location: index');
+  }
 	ob_start();
 	include_once 'config/config.php';
 ?>

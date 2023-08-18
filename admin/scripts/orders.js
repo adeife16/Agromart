@@ -6,8 +6,9 @@ function showOrder(data) {
 	let tbody = $("#proData").html("");
 	let action= "";
 	let reject = ""
-	let clas = "text-success";
 	for(let i in data){
+	let clas = "text-success";
+		console.log(data[i].order_status);
 		if(data[i].order_status == "Pending"){
 			clas = "text-warning";
 			action = "<button class='btn btn-success approve' value='"+data[i].order_id+"'>Approve</button>";
