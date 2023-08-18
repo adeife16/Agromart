@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	getAccount();
 	getCart();
+  checkout(23876392);
 });
 
 function showAccount(data){
@@ -13,7 +14,7 @@ function showCart(data){
 	$("#pro-list").html("");
 	let total = 0;
 	for(let i in data){
-		total += data[i].total;
+		total += parseInt(data[i].total);
 		$("#pro-list").append(`
             <div class="checkout__product__item">
                 <div class="checkout-product">
