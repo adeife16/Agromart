@@ -71,8 +71,6 @@
 	                    <li class="menu-item-has-children has-mega-menu">
 	                    	<a class="nav-link" href="<?php echo $web_link. "about" ?>">About</a>
 	                    </li>
-	                    <li class="menu-item-has-children has-mega-menu menu-item-branch">		<a class="nav-link" href="<?php echo $web_link. "contact" ?>">Contact</a>
-	                    </li>
 	                </ul>
             	</div>
             		<ul class="menu text-right" style="margin-right: 30px!important;">
