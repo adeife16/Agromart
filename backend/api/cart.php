@@ -24,7 +24,8 @@
 
 		$where = [
 			['field' => 'product_id', 'operator' => '=', 'value' => $pro_id],
-			['field' => 'customer_id', 'operator' => '=', 'value' => $user_id]
+			['field' => 'customer_id', 'operator' => '=', 'value' => $user_id],
+			['field' => 'status', 'operator' => '=', 'value' => 'Pending']
 		];
 		$check = $db->selectWhere("cart", ["quantity", "cart_id"], $where);
 
