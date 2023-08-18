@@ -24,11 +24,18 @@ function showProduct(data){
 	let pictures = data.pictures;
 	let reviews = data.reviews;
 	let rating = ""
+    let rate = 0;
 	if(reviews.length == 0){
 		rating = "<i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>"
 	}
 	else{
-
+        for(let i in reviews){
+            rate += parseInt(reviews[i].review_rating);
+        }
+        rate = rate / reviews.length;
+        for(let j = 1; j <= rate; j++){
+            rating += "<i class='fa fa-star text-gold'></i>";
+        }
 	}
 	$("#pro-thumb").html('');
 	for(let i in data.pictures){
