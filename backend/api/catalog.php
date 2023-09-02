@@ -92,3 +92,37 @@ if (isset($_GET['product']) && $_GET['product'])
 	    echo json_encode(["status" => 500]);
 	}
 }
+
+
+if (isset($_GET['proCat'])) {
+    $id = $_GET['proCat'];
+    $query = "SELECT 
+        p.id AS product_id,
+        p.product_id AS external_product_id,
+        p.name AS product_name,
+        p.price AS product_price,
+        p.description AS product_description,
+        p.status AS product_status,
+        c.name AS category_name,
+        pic.picture AS product_picture,
+        COALESCE(AVG(pr.rating), 0) AS average_rating
+    FROM products p
+    JOIN categories c ON p.category_id = c.id
+    LEFT JOIN (
+        SELECT product_id, MIN(picture) AS picture
+        FROM picture
+        GROUP BY product_id
+    ) AS pic ON p.product_id = pic.product_id
+    LEFT JOIN product_reviews pr ON p.id = pr.product_id
+    WHERE p.category_id = '" . $id . "'
+    GROUP BY p.id"; // Move the GROUP BY clause here
+
+    $products = $db->directQuery($query);
+
+    if ($products) {
+        echo json_encode(["status" => 200, "data" => $products]);
+    } else {
+        echo json_encode(["status" => 500]);
+    }
+    exit;
+}

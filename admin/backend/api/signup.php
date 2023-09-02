@@ -52,50 +52,50 @@
 		}
 	}
 
-	function image_upload($filename, $rider_id)
-	{
-	  $allowed_ext = ["jpg","jpeg","png"]; // These will be the only file extensions allowed
-	  $uploadDirectory = "../../images/profile_picture/";
-	  $fileName = $_FILES[$filename]['name'];
-	  $fileSize =$_FILES[$filename]['size'];
-	  $fileTmpName =$_FILES[$filename]['tmp_name'];
-	  $file_type=$_FILES[$filename]['type'];
-	  $error = $_FILES[$filename]['error'];
-	  $tmp = explode('.',$fileName);
-	  $fileExtension=strtolower(end($tmp));
-	  $newName = $rider_id . "." . $fileExtension;
-	  $uploadPath = $uploadDirectory . $newName;
+		function image_upload($filename, $rider_id)
+		{
+		  $allowed_ext = ["jpg","jpeg","png"]; // These will be the only file extensions allowed
+		  $uploadDirectory = "../../images/profile_picture/";
+		  $fileName = $_FILES[$filename]['name'];
+		  $fileSize =$_FILES[$filename]['size'];
+		  $fileTmpName =$_FILES[$filename]['tmp_name'];
+		  $file_type=$_FILES[$filename]['type'];
+		  $error = $_FILES[$filename]['error'];
+		  $tmp = explode('.',$fileName);
+		  $fileExtension=strtolower(end($tmp));
+		  $newName = $rider_id . "." . $fileExtension;
+		  $uploadPath = $uploadDirectory . $newName;
 
-	  // if ($fileSize > 1000000)
-	  // {
+		  // if ($fileSize > 1000000)
+		  // {
 
-	  //   return "large";
+		  //   return "large";
 
-	  // }
+		  // }
 
-	  if (!in_array($fileExtension, $allowed_ext))
-	  {
-	    return "invalid";
-	  }
-	  else
-	  {
-	    if ($error == 0)
-	    {
+		  if (!in_array($fileExtension, $allowed_ext))
+		  {
+		    return "invalid";
+		  }
+		  else
+		  {
+		    if ($error == 0)
+		    {
 
-	      if (move_uploaded_file($fileTmpName , $uploadPath))
-	      {
-	        return "success";
-	      }
-	      else
-	      {
-	        return $error ;
-	      }
-	    }
-	    else
-	    {
-	      return $error;
-	    }
+		      if (move_uploaded_file($fileTmpName , $uploadPath))
+		      {
+		        return "success";
+		      }
+		      else
+		      {
+		        return $error ;
+		      }
+		    }
+		    else
+		    {
+		      return $error;
+		    }
 
-	  }
+		  }
 
-	}
+		}

@@ -270,5 +270,10 @@
         <script type="text/javascript" src="ajax/checkout.js"></script>
         <script type="text/javascript" src="scripts/checkout.js"></script>
     <?php endif ?>
+
+    <?php if ($title == "Products"): ?>
+        <script type="text/javascript" src="ajax/products.js"></script>
+        <script type="text/javascript" src="scripts/products.js"></script>
+    <?php endif ?>
 </body>
 </html>
