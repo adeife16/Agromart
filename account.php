@@ -1,6 +1,10 @@
 <?php 
     $title = "Account";
     require_once 'header.php';
+    if(!isset($_SESSION['user_id']))
+    {
+    	header('Location: login');
+    }
 ?>
 	<main class="no-main">
 		<section class="section--account">
