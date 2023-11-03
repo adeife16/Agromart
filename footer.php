@@ -4,10 +4,9 @@
                 <div class="row">
                     <div class="col-12 col-lg-4">
                         <p class="contact__title">Contact Us</p>
-                        <p><b><i class="icon-telephone"> </i>Hotline: </b><span>(7:00 - 21:30)</span></p>
-                        <p class="telephone">097 978-6290<br>097 343-8888</p>
-                        <p> <b>Head office: </b>8049 High Ridge St. Saint Joseph, MI 49085</p>
-                        <p> <b>Email us: </b>support@farmart.com</p>
+                        <p class="telephone">+23481 234 567 8900</p>
+                        <p> <b>Address: </b>Private Mail Bag 50, The Federal Polytechnic, Ilaro, Oja Odan Road, Ogun State.</p>
+                        <p> <b>Email us: </b>info@federalpolyilaro.edu.ng</p>
                     </div>
                     <div class="col-12 col-lg-4">
                         <div class="row">
