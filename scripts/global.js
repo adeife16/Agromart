@@ -6,7 +6,7 @@ $(document).ready(function() {
 	})
 	.done(function(res){
 		for(let i in res.data){
-			$("#nav-cat").append(`
+			$("#nav-cat, #nav-cat-mobile, #nav-cat-mobile-sidebar").append(`
 				<li>
 					<a href="products?`+res.data[i].id+`">`+res.data[i].name+`</a>
 				</li>

@@ -40,8 +40,8 @@ $(document).ready(function() {
 	});
 
 	function showCart(data){
-		$("#cart-count").html(data.length);
-		let div = $("#cart-list");
+		$("#cart-count, #cart-count-mobile").html(data.length);
+		let div = $("#cart-list, #cart-list-mobile");
 		let total = 0;
 
 		div.html("");
@@ -60,7 +60,7 @@ $(document).ready(function() {
 	                </div>
 	            </li>
 			`)
-			$("#cart-total").html('&#8358;' + total)
+			$("#cart-total, #cart-total-mobile").html('&#8358;' + total)
 		}
 	}
 

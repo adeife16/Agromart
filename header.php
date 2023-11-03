@@ -71,6 +71,8 @@
 	                    <li class="menu-item-has-children has-mega-menu">
 	                    	<a class="nav-link" href="<?php echo $web_link. "about" ?>">About</a>
 	                    </li>
+	                    <li class="menu-item-has-children has-mega-menu menu-item-branch">		<a class="nav-link" href="<?php echo $web_link. "contact" ?>">Contact</a>
+	                    </li>
 	                </ul>
             	</div>
             		<ul class="menu text-right" style="margin-right: 30px!important;">
@@ -101,9 +103,6 @@
 		                                    <li >
 		                                    	<a href="<?php echo $web_link. "account" ?>">Account Settings</a>
 		                                    </li>
-		                                    <li >
-		                                    	<a href="<?php echo $web_link. "cart" ?>">Cart</a>
-		                                    </li>
 		                                    <li>
 		                                    	<a href="<?php echo $web_link. "order" ?>">Orders</a>
 		                                    </li>
@@ -130,7 +129,7 @@
                     <div class="header-inner__left">
                         <button class="navbar-toggler"><i class="icon-menu"></i></button>
                     </div>
-                    <div class="header-inner__center"><a class="logo open" href="<?php echo $web_link. "index" ?>">AGRO<span class="text-success">MART</span></a></div>
+                    <div class="header-inner__center"><a class="logo open" href="<?php echo $web_link. "index" ?>">FPI AGRO<span class="text-success">E-MART</span></a></div>
                     <div class="header-inner__right">
                         <button class="button-icon icon-sm search-mobile"><i class="icon-magnifier"></i></button>
                     </div>
@@ -140,7 +139,7 @@
         <section class="ps-header--center header-desktop">
             <div class="container">
                 <div class="header-inner">
-                    <div class="header-inner__left"><a class="logo" href="<?php echo $web_link. "index"; ?>">AGRO<span class="text-success">MART</span></a>
+                    <div class="header-inner__left"><a class="logo" href="<?php echo $web_link. "index"; ?>">FPI AGRO<span class="text-success">E-MART</span></a>
 
                     </div>
                     <div class="header-inner__center">
