@@ -63,7 +63,7 @@
                 <li class="nav-item"><a class="nav-link" href="<?php echo $web_link. "index" ?>"><i class="icon-home3"></i><span>Home</span></a></li>
                 <li class="nav-item"><a class="nav-link footer-category" href="javascript:void(0);"><i class="icon-list"></i><span>Category</span></a></li>
                 <li class="nav-item"><a class="nav-link footer-cart" href="#" data-toggle="modal" data-target="#exampleModal"><i class="icon-cart"></i><span class="badge bg-warning" id="cart-count-mobile"></span><span>Cart</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="<?php echo $web_link. "wishlist" ?>"><i class="icon-heart"></i><span>Wishlist</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="icon-heart"></i><span>Wishlist</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="<?php echo $web_link. "account" ?>"><i class="icon-user"></i><span>Account</span></a></li>
             </ul>
         </div>
