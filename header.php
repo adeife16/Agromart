@@ -107,7 +107,7 @@
 		                                    	<a href="<?php echo $web_link. "order" ?>">Orders</a>
 		                                    </li>
 		                                    <li>
-		                                    	<a href="<?php echo $web_link. "wishlist" ?>">Wishlist</a>
+		                                    	<a href="#" ?>">Wishlist</a>
 		                                    </li>
 		                                    <hr>
 	                                    	<li>

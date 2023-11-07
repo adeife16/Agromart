@@ -12,7 +12,7 @@ function signup(){
 		if(res == 200){
 			toastr.success("Signup Successfully");
 			setTimeout(function() {
-				window.location.reload();
+				window.location.replace("login");
 			}, 1000);
 		}
 		else{

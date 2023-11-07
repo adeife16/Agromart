@@ -90,7 +90,7 @@
                 <div>
                     <?php if (!isset($_SESSION['user_id'])){?>
                         <a class="dropdown-user" href="#" id="dropdownAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="icon-enter-right text-white fa-lg"></i>Login/Signup
+                            <i class="icon-enter-right text-white fa-lg"></i><span class="font-bold text-white">Login/Signup</span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownAccount">
                             <a class="dropdown-item" href="<?php echo $web_link. "login" ?>">Login</a>

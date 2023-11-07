@@ -23,7 +23,7 @@ function getCart(){
 		
 	})
 	.done(function(res){
-		console.log(res);
+		
 		if(res.status == 200){
 			showCart(res.data);
 		}
@@ -51,10 +51,11 @@ function checkout(ref){
 	.done(function(res){
 		if(res == 200){
 			toastr.success("Order Processed");
+			setTimeout(function() {
+				window.location.replace("index");
+				// console.log("Here");
+			}, 3000);
 		}
-		setTimeout(function() {
-			window.location.replace("index");
-		}, 3000);
 	})
 	.fail(function() {
 		console.log("error");

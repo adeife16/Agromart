@@ -15,40 +15,35 @@
 
 		if($pass == $con_pass)
 		{
-			if(isset($_FILES['picture']['name']) AND $_FILES['picture']['name'] != "")
-			{
-				$upload = image_upload('picture', $user_id);
-			}
+			// if(isset($_FILES['picture']['name']) AND $_FILES['picture']['name'] != "")
+			// {
+			// 	$upload = image_upload('picture', $user_id);
+			// }
 
-			if($upload == "success")
-			{
-		      $split_name = explode("/", $_FILES['picture']['type']);
-		      $photo_ext = $split_name[1];
-		      if($photo_ext == 'jpeg')
-		      {
-		        $photo_ext = 'jpg';
-		      }
-		      $photo = $user_id.".".$photo_ext;
+		    //   $split_name = explode("/", $_FILES['picture']['type']);
+		    //   $photo_ext = $split_name[1];
+		    //   if($photo_ext == 'jpeg')
+		    //   {
+		    //     $photo_ext = 'jpg';
+		    //   }
+		    //   $photo = $user_id.".".$photo_ext;
 
-				$data = array(
+			$data = array(
 					"user_id" => $user_id,
 					"name" => $fname. " " .$lname,
 					"email" => $email,
-					"password" => password_hash($pass, PASSWORD_DEFAULT),
-					"picture" => $photo
-				);
-				$insert = $db->insert("customers", $data);
+					"password" => password_hash($pass, PASSWORD_DEFAULT)
+			);
+			$insert = $db->insert("customers", $data);
 
-				if($insert)
-				{
-					echo json_encode(200);
-				}
-				else
-				{
-					echo json_encode(500);
-				}
+			if($insert)
+			{
+				echo json_encode(200);
 			}
-
+			else
+			{
+				echo json_encode(500);
+			}
 		}
 	}
 

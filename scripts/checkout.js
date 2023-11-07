@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	getAccount();
 	getCart();
-  checkout(23876392);
 });
 
 function showAccount(data){
@@ -46,8 +45,8 @@ function payWithPaystack() {
       toastr.error('Payment Cancelled');
     },
     callback: function(response){
-      let message = 'Payment complete! Reference: ' + response.reference;
-      console.log(response);
+      let message = 'Payment complete!';
+      // console.log(response);
       toastr.success(message);
       checkout(response.reference);
     }

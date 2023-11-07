@@ -33,7 +33,7 @@
                                         <label>Retype password: <span>*</span></label>
                                         <input class="form-control" type="password" name="con_pass" id="con_pass">
                                     </div>
-                                    <div class="col-12 form-group--block">
+<!--                                     <div class="col-12 form-group--block">
                                         <label>Picture Upload: <span>*</span></label>
                                         <div class="alert"></div>
                                         <div id='img_container'><img id="preview" src="assets/images/user.png" alt="your image" width="100" height="100" title=''/></div> 
@@ -43,7 +43,7 @@
                                                 <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                                           </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="col-12 form-group--block mt-5 text-right">
                                         <button class="btn btn-success btn-lg" type="button" id="signup">Submit</button>
                                     </div>
